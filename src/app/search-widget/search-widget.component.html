@@ -1,0 +1,90 @@
+<div class="main">
+  <div class="row">
+    <div class="col-md-4">
+      <label>Location</label>
+      <input type="text" class="form-control" #toggleButton (click)="toggleMenu($event)" [value]="selectedCity" placeholder="Where are you travelling to/from?">
+      <ul class="loc sub-menu" *ngIf="isMenuOpen" >
+        <li *ngFor="let item of cityList" (click)="pickCity(item)">{{item.name}}<span class="citytype"><p>{{item.type}}</p></span></li>
+      </ul>
+    </div>
+    <div class="col-md-4">
+      <label>Date </label>
+      <input readonly type="text" name="dp" class="form-control" placeholder="Check-in / Check-out" ngbDatepicker #d="ngbDatepicker" (click)="dod(d)" [value]="daterange ||''"
+      #dp (dateSelect)="onDateSelection($event)" [minDate]="minDate" [displayMonths]="1" [dayTemplate]="t" outsideDays="hidden" placement="bottom">
+    </div>
+    <div class="col-md-2">
+      <label>Guest</label>
+      <input type="text" class="form-control" #toggleGuestButton (click)="toggleGuestMenu($event)" (window:mouseup)="autoCloseForDropdownCars($event)"  [value]="guest.adult+guest.child+' Guests'">
+      <ul class="loc sub-menu-g DropdownCars" *ngIf="isGuestMenuOpen" >
+        <li>Adult
+          <span style="float: right; display: flex">
+            <div class="fdiv">
+              <button class="btn add-btn" (click)="guestMath({user:'a', op: 'min'})"><span>-</span></button> 
+            </div> 
+            <div class="fdiv" style="max-width: 5px">
+              {{guest.adult}}
+            </div>
+            <div class="fdiv">
+              <button class="btn add-btn" (click)="guestMath({user:'a', op: 'add'})"><span>+</span></button> 
+            </div> 
+          </span>
+        </li>
+        <li>Children
+          <span style="float: right; display: flex">
+            <div class="fdiv">
+              <button class="btn add-btn" (click)="guestMath({user:'c', op: 'min'})"><span>-</span></button> 
+            </div> 
+            <div class="fdiv" style="max-width: 5px">
+              {{guest.child}}
+            </div>
+            <div class="fdiv">
+              <button class="btn add-btn" (click)="guestMath({user:'c', op: 'add'})"><span>+</span></button> 
+            </div> 
+          </span>
+        </li>
+        <li>
+          <small>Age 5-12</small>
+        </li>
+        <li><span class="cancel" (click)="closeGuest('c')">Cancel</span>
+          <span class="apply" (click)="closeGuest('a')">
+            Apply
+          </span>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-2">
+      <label style="visibility: hidden;">hiden</label>
+      <button class="search-btn btn">Search</button>
+    </div>
+  </div>
+</div>
+
+<!-- <p>Example of the range selection</p> -->
+
+<!-- <ngb-datepicker #dp (dateSelect)="onDateSelection($event)" [displayMonths]="1" [dayTemplate]="t" outsideDays="hidden">
+</ngb-datepicker> -->
+
+<ng-template #t let-date let-focused="focused">
+  <span class="custom-day"
+        [class.focused]="focused"
+        [class.range]="isRange(date)"
+        [class.faded]="isHovered(date) || isInside(date)"
+        (mouseenter)="hoveredDate = date"
+        (mouseleave)="hoveredDate = null">
+    {{ date.day }}
+  </span>
+</ng-template>
+
+<hr>
+
+<!-- <pre>From: {{ fromDate | json }} </pre>
+<pre>To: {{ toDate | json }} </pre> -->
+
+
+<!-- <button #toggleButton (click)="toggleMenu($event)"> Toggle Menu</button>
+
+    <div class="menu" *ngIf="isMenuOpen" >
+    <div>
+      I'm the menu. Click outside to close me
+    </div>
+    </div> -->

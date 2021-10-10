@@ -1,0 +1,49 @@
+.vista-sec img{
+    width: 70px;
+    height: 60px;
+    /* margin-left: 70px; */
+}
+
+.icon{
+    margin-top: 35px;
+    /* margin-right: -277px; */
+}
+
+.vista-sec p{
+    font-size: 16px!important;
+    color: #222!important;
+    padding-top: 32px;
+    font-family: 'Red Hat Display', sans-serif;
+    text-align: center;
+    font-weight: 600;
+}
+
+img, svg {
+    vertical-align: middle;
+}
+
+.vista-sec{
+    text-align: center;
+}
+
+@media (min-width: 992px){
+.col-lg-2 {
+    margin: 15px;
+    padding: 10px 0;
+}
+}
+
+.title{
+    text-align: center;
+    padding-top: 40px;
+    color: #222!important;
+    font-size: 26px!important;
+    padding-bottom: 1.5rem!important;
+    font-weight: 900;
+}
+
+/* .vmain{
+    margin-top: 50px;
+    margin-bottom: 70px;
+    background: #f7f7f7;
+} */

@@ -1,1 +1,68 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400&display=swap');
+body{
+    margin: 0px;
+}
+
+p,h1,h2,h3,h4,i,li,span,.btn,input,label,::-webkit-input-placeholder,div {
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+/* .slick-dots li button{
+    border: 2px solid rgb(255, 0, 0);
+} */
+
+.slick-dots .slick-active button{
+    border: 2px solid #e0515b;
+}
+
+/* .slick-track, .slick-slide{
+    width: 100% !important;
+}
+.slick-track div .slick-slide div{
+    width: 100%;
+} */
+
+.slick-dots li button{
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 18px;
+    height: 18px;
+    padding: 7px;
+    cursor: pointer;
+    color: unset !important;
+    border: 0;
+    outline: none;
+    background: unset !important;
+    border: 3px solid #dadada;
+    border-radius: 50% !important;
+}
+
+.slick-dots li button:before {
+    font-family: 'slick';
+    font-size: 10px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    content: unset !important;
+    text-align: center;
+    opacity: .25;
+    color: unset !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+.slick-dots .slick-active button:before {
+
+    content: '•' !important;
+    color: #e0515b !important;
+}
+
+.slick-dots li {
+    margin: 0 8px !important;
+}

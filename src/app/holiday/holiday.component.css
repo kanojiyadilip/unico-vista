@@ -1,0 +1,43 @@
+.img1{
+    background-color: #ccc;
+    height: 320px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    border-radius: 5px;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.img1:hover .bottom-pop {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.bottom-pop{
+    background: #fff;
+    height: 72px;
+    width: 100%;
+    border-radius: 0 0 5px 5px;
+    margin-top: auto;
+    opacity: 0;
+    transition: .5s cubic-bezier(.25,.46,.45,.94);
+    transform: translateY(100%);
+    padding: .5rem!important;
+}
+
+.bt-pop-inner-div{
+    display: flex; padding: 5px;
+}
+
+.div-left{
+    width:100%
+}
+.div-right{
+    width:100%;
+    text-align: right;
+}

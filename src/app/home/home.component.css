@@ -1,0 +1,63 @@
+.search-widget-banner{
+    background-image: url("https://img.vistarooms.com/angular_assets/common/home_page/home_carousel/Hero+Banner+1.jpg");
+    /* background-repeat: no-repeat;
+    background-size: auto; */
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    height: 600px;
+    position: relative;
+}
+
+.iner-div{
+    margin: 150px 0;
+    position: absolute;
+    width: 100%;
+}
+
+.banner img{
+    width: 100%;
+    height: auto;
+}
+.m-t-75{
+    margin-top: 75px;
+}
+.below-search-widget{
+    /* padding: 10px 25px; */
+}
+
+.vmain{
+    margin-top: 50px;
+    margin-bottom: 70px;
+    background: #f7f7f7;
+}
+
+
+
+/* ================================================= */
+
+#customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #customers tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #customers tr:hover {background-color: #ddd;}
+  
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #e0515b;
+    color: white;
+  }

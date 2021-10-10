@@ -1,0 +1,73 @@
+<section>
+    <div class="search-widget-banner" [defaultImage]="defaultImage" [lazyLoad]="bannerimg1">
+        <div class="iner-div">
+            <app-search-widget></app-search-widget>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <app-custom-carousel></app-custom-carousel>
+    </div>
+</section>
+
+<section class="m-t-75">
+    <div class="container below-search-widget">
+        <div class="banner">
+            <img [defaultImage]="defaultImage" [lazyLoad]="bannerimg2" />
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="vmain">
+        <div class="container" style="text-align: center;">
+            <app-vista-section></app-vista-section>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <app-holiday></app-holiday>
+    </div>
+</section>
+
+<!-- <section>
+    <div class="container">
+        <app-custom-carousel></app-custom-carousel>
+    </div>
+</section> -->
+
+<!-- <section>
+    <div class="container">
+        <app-table></app-table>
+    </div>
+</section> -->
+
+<section>
+    
+    
+    <div class="container" style="padding: 40px 0;">
+        <table id="customers">
+            <tr>
+              <th>Id</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Address</th>
+              <th>Phone</th>
+              <th>website</th>
+            </tr>
+
+            <tr *ngFor="let item of data">
+                <td>{{item.id}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.email}}</td>
+                <td>{{item.address.city}}, {{item.address.zipcode}}</td>
+                <td>{{item.phone}}</td>
+                <td>{{item.website}}</td>
+            </tr>
+          </table>
+    </div>
+</section>

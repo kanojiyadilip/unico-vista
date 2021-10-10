@@ -1,0 +1,79 @@
+<!-- <body> -->
+    <nav style="z-index: 9;">
+      <a href="" class="home"><img src="https://www.vistarooms.com/assets/desktop/RED.svg" /></a>
+      <ul class="dropdown">
+        <li><a href="#"><span>Cities</span> <i class="fa fa-caret-down arrow a1"></i></a>
+            <ul>
+                <li *ngFor="let item of dropDownList">
+                    <a href="">{{item.lable}} <i class="fa fa-angle-right arrow"></i></a>
+                    <ul *ngIf="item?.multi?.length > 0">
+                        <li *ngFor="let chil of item?.multi">
+                            <a href="">{{chil.lable}}</a>
+                        </li>    
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <ul class="dropdown">
+        <li><a href="#"><span>Explore</span> <i class="fa fa-caret-down arrow a1"></i></a>
+            <ul>
+                <li>
+                    <a href="">Plan An Event <i class="fa fa-angle-right arrow"></i></a>
+                </li>
+                <li>
+                    <a href="">Coporate Offiste <i class="fa fa-angle-right arrow"></i></a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <ul class="dropdown">
+        <li>
+            <a href="#">Partner With Us</a>
+        </li>
+    </ul>
+    <ul class="dropdown">
+        <li>
+            <a href="#">Need Help?</a>
+        </li>
+    </ul> 
+    <ul class="dropdown">
+        <li>
+            <button class="btn navbtn bell"><span>Offers</span> <i class="fa fa-bell-o"></i></button>
+        </li>
+    </ul>
+    <ul class="dropdown">
+        <li>
+            <button class="btn navbtn user"><i class='fa fa-user'></i><span>Login</span> </button>
+        </li>
+    </ul>
+
+      <!-- <a href="#projects">Partner With Us</a>
+      <a href="#blog">Need Help?</a> -->
+      <!-- <a href="#contact">contact</a> -->
+    </nav>
+  <!-- </body> -->
+
+  <!-- <ul class="dropdown">
+    <li><a href="#">Menu</a>
+        <ul>
+            <li><a href="">Nice Dropdown Menu</a></li>
+            <li><a href="">Submenu - 1</a></li>
+            <li><a href="#">Dropdown</a>
+                <ul>
+                    <li><a href="">Submenu - 1</a></li>
+                    <li><a href="">Submenu - 2</a></li>
+                    <li><a href="#">Dropdown</a>
+                        <ul>
+                            <li><a href="">Submenu - 1</a></li>
+                            <li><a href="">Submenu - 2</a></li>
+                            <li><a href="">Submenu - 3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Submenu - 3</a></li>
+                </ul>
+            </li>
+            <li><a href="">Submenu - 2</a></li>
+        </ul>
+    </li>
+</ul> -->
