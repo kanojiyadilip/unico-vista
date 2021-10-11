@@ -16,8 +16,13 @@ export class HomeComponent implements OnInit {
   bannerimg1:any="https://img.vistarooms.com/angular_assets/common/home_page/home_carousel/Hero+Banner+1.jpg";
   bannerimg2:any="https://img.vistarooms.com/angular_assets/common/home_page/Dubai/desktop+dubai+banner+homepage.jpg";
   ngOnInit(): void {
-    this.http.get<any>('https://jsonplaceholder.typicode.com/users').subscribe(data => {
-      console.log("==>2<>",data);
+    // this.http.get<any>('https://jsonplaceholder.typicode.com/users').subscribe(data => {
+    //   console.log("==>2<>",data);
+    //   this.data = data;
+    // })
+
+    this.api.userData().subscribe(data=>{
+      console.log("==>3<>",data);
       this.data = data;
     })
   }
